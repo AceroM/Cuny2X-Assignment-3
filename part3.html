@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./semantic.min.css" />
+    <script src="./semantic.min.js"></script>
+    <script src="./part3.js"></script>
+    <style>
+        #returnButton {
+            position: sticky;
+        }
+    </style>
+</head>
+<body>
+    <div class="ui center aligned segment">
+        <a id="returnButton" href="./index.html" class="button">Return</a>
+        <form class="ui form">
+            <div class="field">
+                <label>Username</label>
+                <input type="text" name="first-name" placeholder="Username..." style="max-width: 24em;">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input id="pwd" type="password" name="last-name" placeholder="password" style="max-width: 24em;">
+            </div>
+            <div class="field">
+                <h1 id="valid"></h1>
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>I agree to the Terms and Conditions</label>
+                </div>
+            </div>
+        </form>
+        <button onClick="submitHandler()" id="sub" class="ui button" type="submit" style="width: 24em;">Submit</button>
+    </div>
+    <script>
+    </script>
+</div>
+</body>
+</html>

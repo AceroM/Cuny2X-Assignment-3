@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./semantic.min.css" />
+    <script src="./semantic.min.js"></script>
+    <style>
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="ui center aligned segment">
+        <a id="returnButton" href="./index.html" class="button">Return</a>
+        <h1>Volume of a Sphere</h1>
+        <div class="field" placeholder="Last Name">
+            <div id="label" class="ui pointing below label">
+                Please enter a radius value
+            </div>
+        </div>
+        <h2 class="volume"></h2>
+        <div class="ui input">
+            <input type="text" id="volumeVal" placeholder="Enter radius..." style="width:30em;"/>
+        </div>
+        <h1 id="status">0.00</h1>
+    </div>
+    <script>
+        var userInput = document.getElementById("volumeVal")
+        userInput.onkeyup = function() {
+            var radius = this.value
+            if (radius !== "") {
+                document.getElementById("label").setAttribute("class", "none");
+                radius = Math.abs(radius);
+                let volume = (4/3) * Math.PI * Math.pow(radius, 3);
+                volume = volume.toFixed(2);
+                document.getElementById("status").innerText = volume;
+            }
+            else {
+                document.getElementById("label").removeAttribute("class", "none");
+                document.getElementById("label").setAttribute("class", "ui pointing below label");
+                document.getElementById("status").innerText = "0.00";
+            }
+        };
+    </script>
+</div>
+</body>
+</html>

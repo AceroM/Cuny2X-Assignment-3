@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles.css" />
+
+</head>
+<body>
+    <div class="buttonContainer">
+    <a href="./index.html" class="button">Return</a>
+    <h1 id="right">Click A Button</h1>
+    <a class="button" href="#" id="one" title="">One</a>
+    <a class="button" href="#" id="two" title="">Two</a>
+    <script>
+        function rightHandler() {
+            if (document.getElementById("right").innerText === "I'm right" || document.getElementById("right").innerText === "No I'm Right") document.getElementById("right").innerText = "No I'm Right";
+            else document.getElementById("right").innerText = "I'm right";
+        }
+
+        document.getElementById("one").addEventListener("click", rightHandler);
+        document.getElementById("two").addEventListener("click", rightHandler)
+    </script>
+</div>
+</body>
+</html>
